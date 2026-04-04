@@ -80,7 +80,7 @@ export default function ServicesPage() {
                          View Full Details
                        </Link>
                        <a 
-                         href={`https://wa.me/9008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}.`} 
+                         href={`https://wa.me/919008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}.`} 
                          target="_blank" 
                          rel="noopener noreferrer" 
                          className="flex-1 inline-flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 px-4 py-3 rounded-full text-sm font-semibold hover:bg-[#25D366] hover:text-white transition-all duration-300 w-full"
@@ -126,7 +126,7 @@ export default function ServicesPage() {
                          View Full Details
                        </Link>
                        <a 
-                         href={`https://wa.me/9008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}.`} 
+                         href={`https://wa.me/919008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}.`} 
                          target="_blank" 
                          rel="noopener noreferrer" 
                          className="flex-1 inline-flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 px-4 py-3 rounded-full text-sm font-semibold hover:bg-[#25D366] hover:text-white transition-all duration-300 w-full"

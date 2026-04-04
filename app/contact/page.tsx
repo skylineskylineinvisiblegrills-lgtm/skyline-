@@ -54,7 +54,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">WhatsApp Us</h3>
                 <p className="text-neutral-400 mb-2">Get instant replies and quote estimates via WhatsApp.</p>
-                <a href="https://wa.me/9008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20Premium%20Invisible%20Grills%20and%20Smart%20Cloth%20Hangers." target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-medium inline-flex items-center gap-2 hover:underline">
+                <a href="https://wa.me/919008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20Premium%20Invisible%20Grills%20and%20Smart%20Cloth%20Hangers." target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-medium inline-flex items-center gap-2 hover:underline">
                   Message Now 
                 </a>
               </div>

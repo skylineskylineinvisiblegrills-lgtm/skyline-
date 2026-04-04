@@ -168,7 +168,7 @@ export default async function ServiceDetailsPage({ params }: { params: Promise<{
             
             <div className="flex flex-col sm:flex-row gap-4">
                <a 
-                 href={`https://wa.me/9008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}.`} 
+                 href={`https://wa.me/919008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}.`} 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#20bd5a] transition-all shadow-lg hover:shadow-[#25d366]/20 w-full sm:w-auto"

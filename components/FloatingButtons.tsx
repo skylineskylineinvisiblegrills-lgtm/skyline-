@@ -29,7 +29,7 @@ export function FloatingButtons() {
         transition={{ delay: 1.1, type: "spring", stiffness: 260, damping: 20 }}
       >
         <Link
-          href="https://wa.me/9008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20Premium%20Invisible%20Grills%20and%20Smart%20Cloth%20Hangers."
+          href="https://wa.me/919008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20Premium%20Invisible%20Grills%20and%20Smart%20Cloth%20Hangers."
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform relative group"
