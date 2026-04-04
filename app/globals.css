@@ -23,4 +23,13 @@ body {
   .glass {
     @apply bg-black/40 backdrop-blur-xl border border-white/10;
   }
+  
+  /* Hide native browser scrollbars */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

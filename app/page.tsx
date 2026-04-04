@@ -235,6 +235,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* See Our Work in Action */}
+      <section className="py-24 bg-neutral-950 relative border-t border-b border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">See Our Work in Action</h2>
+            <p className="text-neutral-400 max-w-2xl mx-auto">
+              A glimpse of Skyline Invisible Grills installations across Bangalore — safety meets style.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid md:grid-cols-4 md:gap-6 w-full max-w-full">
+            {[1, 2, 3, 4].map((num) => (
+              <div 
+                key={num} 
+                className="w-full relative rounded-3xl overflow-hidden glass border border-white/10 shadow-xl aspect-[4/5] md:aspect-[9/16]"
+              >
+                <video 
+                  src={`/videos/invisible-grill-${num}.mp4`} 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-24 bg-black relative z-20 border-t border-white/5">
         <div className="container mx-auto px-6">
@@ -267,7 +296,7 @@ export default function HomePage() {
                   <feature.icon className="w-6 h-6 md:w-7 md:h-7 text-white group-hover:text-black transition-colors" />
                 </div>
                 <h3 className="text-lg md:text-xl text-white font-semibold mb-2 md:mb-3">{feature.title}</h3>
-                <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{feature.desc}</p>
+                <p className="text-neutral-400 leading-relaxed text-base md:text-lg">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
