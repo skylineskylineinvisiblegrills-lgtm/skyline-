@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { CheckCircle2, MessageCircle } from "lucide-react";
 import Tilt from "react-parallax-tilt";
@@ -62,23 +63,29 @@ export default function ServicesPage() {
                   transition={{ delay: idx * 0.1 }}
                   className="glass rounded-2xl overflow-hidden group flex flex-col h-full border border-white/10"
                 >
-                  <div className="relative w-full aspect-video">
+                  <Link href={`/services/${service.title.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`} className="relative w-full aspect-video block overflow-hidden group-hover:cursor-pointer">
                     <Image src={service.image} alt={service.title} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                  </div>
+                  </Link>
                   <div className="p-6 md:p-8 flex flex-col justify-center flex-1">
                     <h3 className="text-xl font-bold text-white mb-3 flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-neutral-400 shrink-0 mt-1" />
                       {service.title}
                     </h3>
                     <p className="text-neutral-400 text-sm leading-relaxed flex-1">{service.desc}</p>
-                    <div className="mt-6 md:mt-8 pt-6 border-t border-white/10">
+                    <div className="mt-6 md:mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+                       <Link 
+                         href={`/services/${service.title.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`}
+                         className="flex-1 inline-flex items-center justify-center gap-2 bg-white/5 text-white border border-white/20 px-4 py-3 rounded-full text-sm font-semibold hover:bg-white/10 transition-all duration-300 w-full"
+                       >
+                         View Full Details
+                       </Link>
                        <a 
                          href={`https://wa.me/9008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}.`} 
                          target="_blank" 
                          rel="noopener noreferrer" 
-                         className="inline-flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 px-6 py-3 rounded-full text-sm md:text-base font-semibold hover:bg-[#25D366] hover:text-white transition-all duration-300 w-full"
+                         className="flex-1 inline-flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 px-4 py-3 rounded-full text-sm font-semibold hover:bg-[#25D366] hover:text-white transition-all duration-300 w-full"
                        >
-                         <MessageCircle className="w-4 h-4" /> Enquire via WhatsApp
+                         <MessageCircle className="w-4 h-4" /> WhatsApp
                        </a>
                     </div>
                   </div>
@@ -105,20 +112,26 @@ export default function ServicesPage() {
                   transition={{ delay: idx * 0.1 }}
                   className="glass rounded-2xl overflow-hidden group flex flex-col h-full border border-white/10"
                 >
-                  <div className="relative w-full aspect-video">
+                  <Link href={`/services/${service.title.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`} className="relative w-full aspect-video block overflow-hidden group-hover:cursor-pointer">
                     <Image src={service.image} alt={service.title} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                  </div>
+                  </Link>
                   <div className="p-6 md:p-8 flex flex-col justify-center flex-1">
                     <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{service.title}</h3>
                     <p className="text-neutral-400 leading-relaxed flex-1">{service.desc}</p>
-                    <div className="mt-6 md:mt-8 pt-6 border-t border-white/10">
+                    <div className="mt-6 md:mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+                       <Link 
+                         href={`/services/${service.title.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`}
+                         className="flex-1 inline-flex items-center justify-center gap-2 bg-white/5 text-white border border-white/20 px-4 py-3 rounded-full text-sm font-semibold hover:bg-white/10 transition-all duration-300 w-full"
+                       >
+                         View Full Details
+                       </Link>
                        <a 
                          href={`https://wa.me/9008603980?text=Hello%20Skyline,%20I%20would%20like%20to%20enquire%20about%20your%20${encodeURIComponent(service.title)}.`} 
                          target="_blank" 
                          rel="noopener noreferrer" 
-                         className="inline-flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 px-6 py-3 rounded-full text-sm md:text-base font-semibold hover:bg-[#25D366] hover:text-white transition-all duration-300 w-full"
+                         className="flex-1 inline-flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 px-4 py-3 rounded-full text-sm font-semibold hover:bg-[#25D366] hover:text-white transition-all duration-300 w-full"
                        >
-                         <MessageCircle className="w-4 h-4" /> Enquire via WhatsApp
+                         <MessageCircle className="w-4 h-4" /> WhatsApp
                        </a>
                     </div>
                   </div>
