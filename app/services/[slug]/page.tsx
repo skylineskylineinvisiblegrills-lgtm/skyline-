@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, ShieldCheck, Star } from "lucide-react";
@@ -89,6 +90,46 @@ const allServicesData = {
     features: ["Individual Rod Control", "Low Physical Effort", "High-Quality Nylon", "Aesthetic Utility"],
   }
 };
+
+type Props = {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata(
+  { params }: Props
+): Promise<Metadata> {
+  const resolvedParams = await params;
+  const slug = decodeURIComponent(resolvedParams.slug);
+  const service = allServicesData[slug as keyof typeof allServicesData];
+
+  if (!service) {
+    return {
+      title: 'Service Not Found',
+      description: 'The requested service could not be found.',
+    }
+  }
+
+  return {
+    title: service.title,
+    description: service.desc,
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
+    openGraph: {
+      title: `${service.title} | Skyline Invisible Grills`,
+      description: service.desc,
+      url: `https://www.skylinegrills.com/services/${slug}`,
+      images: [
+        {
+          url: service.image,
+          width: 800,
+          height: 600,
+          alt: service.title,
+        },
+      ],
+    },
+  }
+}
 
 export default async function ServiceDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;

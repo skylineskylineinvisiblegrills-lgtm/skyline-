@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.skylinegrills.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: "Skyline Invisible Grills & Smart Cloth Hangers | Premium Safety",
     template: "%s | Skyline Invisible Grills"
@@ -50,6 +54,22 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Skyline Invisible Grills",
+  "image": "https://www.skylinegrills.com/icon.png",
+  "url": "https://www.skylinegrills.com",
+  "telephone": "+919008603980",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "description": "Premium invisible grills and smart cloth hangers for balconies, windows, and high-rise apartments."
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -60,6 +80,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen flex flex-col`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
