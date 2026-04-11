@@ -18,9 +18,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.skylinegrills.com'),
-  alternates: {
-    canonical: '/',
-  },
   title: {
     default: "Skyline Invisible Grills & Smart Cloth Hangers | Premium Safety",
     template: "%s | Skyline Invisible Grills"
