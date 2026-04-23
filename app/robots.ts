@@ -5,8 +5,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/_next/', '/private/'],
+      disallow: ['/private/'],
     },
+    host: 'https://www.skylinegrills.com',
     sitemap: 'https://www.skylinegrills.com/sitemap.xml',
   }
 }

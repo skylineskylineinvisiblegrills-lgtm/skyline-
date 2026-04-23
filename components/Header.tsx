@@ -33,11 +33,14 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
         scrolled
-          ? "bg-black/70 backdrop-blur-md border-white/10 py-3 shadow-2xl"
-          : "bg-transparent py-5"
+          ? "bg-black/70 backdrop-blur-md border-white/10 shadow-2xl"
+          : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="bg-white text-black text-center text-[11px] md:text-xs font-semibold py-1 px-3">
+        Invisible Grills & Smart Cloth Hangers services in Bengaluru | Affordable cost | Free site visit
+      </div>
+      <div className={cn("container mx-auto px-6 flex items-center justify-between", scrolled ? "py-3" : "py-5")}>
         <Link href="/" className="flex items-center gap-2 z-50">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -87,7 +90,7 @@ export function Header() {
               className="flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-neutral-200 transition-colors shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]"
             >
               <PhoneCall className="w-4 h-4" />
-              <span>Get Quote</span>
+              <span>Free Site Visit</span>
             </Link>
           </motion.div>
         </nav>
@@ -142,7 +145,7 @@ export function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <PhoneCall className="w-5 h-5" />
-                  <span>Call Us Now</span>
+                  <span>Call for Free Site Visit</span>
                 </Link>
               </motion.li>
             </ul>

@@ -1,9 +1,24 @@
 "use client";
 
+import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 
 export default function ContactPage() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const leadMessage = `Hello Skyline, I would like a free quote.%0A%0AName: ${encodeURIComponent(
+      name
+    )}%0APhone: ${encodeURIComponent(phone)}%0ARequirement: ${encodeURIComponent(
+      message
+    )}`;
+    window.open(`https://wa.me/919008603980?text=${leadMessage}`, "_blank");
+  };
+
   return (
     <div className="pt-32 pb-20 bg-black min-h-screen">
       <div className="container mx-auto px-6 max-w-6xl">
@@ -21,7 +36,7 @@ export default function ContactPage() {
             transition={{ delay: 0.2 }}
             className="text-neutral-400 mx-auto text-lg max-w-2xl"
           >
-            Request a free measurement, ask for a quote, or simply say hello. Our experts are ready to assist you.
+            Invisible Grills & Smart Cloth Hangers services in Bengaluru at affordable cost with free site visit.
           </motion.p>
         </div>
 
@@ -90,36 +105,48 @@ export default function ContactPage() {
             className="glass rounded-3xl p-8 lg:p-10 border border-white/10"
           >
             <h3 className="text-2xl font-bold text-white mb-8">Send us a message</h3>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="space-y-2">
-                <label className="text-sm text-neutral-400 font-medium">Your Name</label>
+                <label htmlFor="name" className="text-sm text-neutral-400 font-medium">Your Name</label>
                 <input 
+                  id="name"
                   type="text" 
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
                   placeholder="John Doe"
+                  required
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm text-neutral-400 font-medium">Phone Number</label>
+                <label htmlFor="phone" className="text-sm text-neutral-400 font-medium">Phone Number</label>
                 <input 
+                  id="phone"
                   type="tel" 
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
                   placeholder="+91 98765 43210"
+                  required
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm text-neutral-400 font-medium">Message</label>
+                <label htmlFor="message" className="text-sm text-neutral-400 font-medium">Message</label>
                 <textarea 
+                  id="message"
                   rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all resize-none"
                   placeholder="I am interested in invisible grills for my balcony..."
+                  required
                 ></textarea>
               </div>
               <button 
-                type="button"
+                type="submit"
                 className="w-full bg-white text-black font-semibold py-4 rounded-xl hover:bg-neutral-200 transition-colors mt-4 flex items-center justify-center gap-2"
               >
-                Request Free Quote
+                Request Free Quote on WhatsApp
                 <Send className="w-4 h-4" />
               </button>
             </form>

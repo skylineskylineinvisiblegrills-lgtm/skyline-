@@ -14,6 +14,9 @@ export function Footer() {
             <p className="max-w-md text-sm leading-relaxed">
               Premium invisible grills and smart cloth hangers for modern homes. Combining uncompromised safety with unhindered views, engineered for durability and designed for elegance.
             </p>
+            <p className="max-w-md text-sm leading-relaxed mt-4 text-neutral-300">
+              Invisible Grills & Smart Cloth Hangers services in Bengaluru at affordable cost with free site visit.
+            </p>
           </div>
           
           <div>

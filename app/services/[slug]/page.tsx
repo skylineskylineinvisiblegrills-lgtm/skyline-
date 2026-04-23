@@ -95,6 +95,10 @@ type Props = {
   params: Promise<{ slug: string }>
 }
 
+export function generateStaticParams() {
+  return Object.keys(allServicesData).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
@@ -112,6 +116,14 @@ export async function generateMetadata(
   return {
     title: service.title,
     description: service.desc,
+    keywords: [
+      service.title,
+      "invisible grills",
+      "balcony safety",
+      "window safety",
+      "smart cloth hangers",
+      "Bengaluru",
+    ],
     alternates: {
       canonical: `/services/${slug}`,
     },
@@ -119,6 +131,7 @@ export async function generateMetadata(
       title: `${service.title} | Skyline Invisible Grills`,
       description: service.desc,
       url: `https://www.skylinegrills.com/services/${slug}`,
+      type: "article",
       images: [
         {
           url: service.image,
@@ -127,6 +140,12 @@ export async function generateMetadata(
           alt: service.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} | Skyline`,
+      description: service.desc,
+      images: [service.image],
     },
   }
 }
@@ -140,8 +159,32 @@ export default async function ServiceDetailsPage({ params }: { params: Promise<{
     notFound();
   }
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.desc,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Skyline Invisible Grills",
+      url: "https://www.skylinegrills.com",
+      telephone: "+919008603980",
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Bengaluru",
+    },
+    serviceType: service.title,
+    url: `https://www.skylinegrills.com/services/${slug}`,
+    image: `https://www.skylinegrills.com${service.image}`,
+  };
+
   return (
     <div className="bg-black min-h-screen pt-32 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <div className="container mx-auto px-6">
         
         {/* Back Link */}

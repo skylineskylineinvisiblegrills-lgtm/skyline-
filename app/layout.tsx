@@ -19,13 +19,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.skylinegrills.com'),
   title: {
-    default: "Skyline Invisible Grills & Smart Cloth Hangers | Premium Safety",
+    default: "Invisible Grills & Smart Cloth Hangers Services in Bengaluru | Skyline",
     template: "%s | Skyline Invisible Grills"
   },
-  description: "Premium invisible grills and smart cloth hangers for balconies, windows, and high-rise apartments. Uncompromised safety for kids and pets without blocking your view.",
-  keywords: ["invisible grills", "balcony safety grills", "smart cloth hangers", "invisible grills manufacturer", "stainless steel invisible grills", "pigeon control safety grill", "child safety grills", "pets protection grills", "Bengaluru invisible grills", "Hyderabad invisible grills"],
+  description: "Invisible grills and smart cloth hangers services in Bengaluru at affordable cost with free site visit. Premium safety for balconies, windows, and high-rise apartments.",
+  keywords: ["invisible grills", "smart cloth hangers", "invisible grills services in bengaluru", "affordable invisible grills", "free site visit invisible grills", "balcony safety grills", "stainless steel invisible grills", "child safety grills", "pets protection grills", "bengaluru invisible grills"],
   authors: [{ name: "Skyline" }],
   creator: "Skyline Invisible Grills",
+  alternates: {
+    canonical: "/",
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -33,11 +37,25 @@ export const metadata: Metadata = {
     title: "Skyline Invisible Grills | Premium Balcony & Window Safety",
     description: "Protect your loved ones with our 316 marine-grade stainless steel invisible grills. Seamless aesthetics, 400kg impact resistance, and complete peace of mind.",
     siteName: "Skyline Invisible Grills",
+    images: [
+      {
+        url: "/images/hero_balcony.png",
+        width: 1200,
+        height: 630,
+        alt: "Skyline Invisible Grills premium installation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Skyline Invisible Grills | Smart Safety Solutions",
     description: "Uncompromised safety without blocking your view. Premium invisible grills and smart hangers.",
+    images: ["/images/hero_balcony.png"],
+  },
+  icons: {
+    icon: [{ url: "/icon", sizes: "512x512", type: "image/png" }],
+    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/icon"],
   },
   robots: {
     index: true,
@@ -56,9 +74,15 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Skyline Invisible Grills",
-  "image": "https://www.skylinegrills.com/icon.png",
+  "image": "https://www.skylinegrills.com/icon",
   "url": "https://www.skylinegrills.com",
   "telephone": "+919008603980",
+  "email": "info@skylinegrills.com",
+  "areaServed": ["Bengaluru", "Bangalore", "Karnataka"],
+  "priceRange": "₹₹",
+  "sameAs": [
+    "https://www.skylinegrills.com"
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Bengaluru",

@@ -15,25 +15,63 @@ const servicesSlugs = [
   "pull-and-dry-systems"
 ];
 
+const areaSlugs = [
+  "whitefield",
+  "electronic-city",
+  "sarjapur-road",
+  "hsr-layout",
+  "jp-nagar",
+  "marathahalli",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.skylinegrills.com'
+  const lastModified = new Date()
 
-  // Define static routes
-  const routes = ['', '/services', '/gallery', '/about', '/contact'].map(
+  const routes = [
+    '',
+    '/services',
+    '/gallery',
+    '/about',
+    '/contact',
+    '/invisible-grills-bangalore',
+    '/smart-cloth-hangers-bangalore',
+  ].map(
     (route) => ({
       url: `${baseUrl}${route}`,
-      lastModified: new Date(),
-      changeFrequency: (route === '' ? 'weekly' : 'monthly') as 'weekly' | 'monthly' | 'always' | 'hourly' | 'daily' | 'yearly' | 'never',
-      priority: route === '' ? 1.0 : route === '/services' ? 0.9 : 0.8,
+      lastModified,
+      changeFrequency: (route === '' ? 'daily' : 'weekly') as 'weekly' | 'monthly' | 'always' | 'hourly' | 'daily' | 'yearly' | 'never',
+      priority:
+        route === ''
+          ? 1.0
+          : route === '/services'
+            ? 0.9
+            : route === '/invisible-grills-bangalore' || route === '/smart-cloth-hangers-bangalore'
+              ? 0.9
+              : 0.8,
     })
   )
 
   const serviceRoutes = servicesSlugs.map((slug) => ({
     url: `${baseUrl}/services/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
   }))
 
-  return [...routes, ...serviceRoutes]
+  const areaRoutes = areaSlugs.map((slug) => ({
+    url: `${baseUrl}/invisible-grills-bangalore/${slug}`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.88,
+  }))
+
+  const hangerAreaRoutes = areaSlugs.map((slug) => ({
+    url: `${baseUrl}/smart-cloth-hangers-bangalore/${slug}`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.87,
+  }))
+
+  return [...routes, ...serviceRoutes, ...areaRoutes, ...hangerAreaRoutes]
 }

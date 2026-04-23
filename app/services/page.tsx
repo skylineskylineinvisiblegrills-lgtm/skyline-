@@ -44,6 +44,14 @@ export default function ServicesPage() {
           >
             Explore our state-of-the-art product range designed specifically for luxury living and safety.
           </motion.p>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
+            <Link href="/invisible-grills-bangalore" className="text-white underline">
+              Invisible Grills in Bangalore
+            </Link>
+            <Link href="/smart-cloth-hangers-bangalore" className="text-white underline">
+              Smart Cloth Hangers in Bangalore
+            </Link>
+          </div>
         </div>
 
         {/* Section: Invisible Grills */}

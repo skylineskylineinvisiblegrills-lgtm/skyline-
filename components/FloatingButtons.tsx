@@ -18,7 +18,7 @@ export function FloatingButtons() {
         >
           <Phone className="w-6 h-6" />
           <span className="absolute right-full mr-4 bg-white text-black px-3 py-1 rounded-md text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg hidden md:block">
-            Call Us
+            Free Site Visit
           </span>
         </Link>
       </motion.div>
@@ -36,7 +36,7 @@ export function FloatingButtons() {
         >
           <MessageCircle className="w-6 h-6" />
           <span className="absolute right-full mr-4 bg-[#25D366] text-white px-3 py-1 rounded-md text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg hidden md:block">
-            WhatsApp
+            Affordable Quote
           </span>
           <span className="absolute inset-0 rounded-full animate-ping bg-[#25D366] opacity-30"></span>
         </Link>

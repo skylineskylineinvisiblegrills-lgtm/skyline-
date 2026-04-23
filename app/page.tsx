@@ -29,6 +29,45 @@ const testimonials = [
   { name: "Ananya D.", city: "Bengaluru", text: "The best investment for our new apartment. Keeps the pigeons away and looks incredibly premium. You honestly can't even see the cables from afar." },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the cost of invisible grills in Bangalore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The cost depends on area size, cable spacing, and installation requirements. Contact Skyline for a free site inspection and accurate quote.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are invisible grills safe for kids and pets?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Skyline uses high-tensile 316 marine-grade stainless steel cables with secure tensioning and child-safe spacing options.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do invisible grills rust in rain?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Skyline systems are made with anti-rust 316 marine-grade steel and nano nylon coating designed for long-term weather resistance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How quickly can installation be completed?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most installations are completed quickly after measurement and confirmation. Timelines vary by project size and site conditions.",
+      },
+    },
+  ],
+};
+
 export default function HomePage() {
   const [currentHeroBlock, setCurrentHeroBlock] = useState(0);
   const [currentFeature, setCurrentFeature] = useState(0);
@@ -57,6 +96,10 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Hero Section with Auto Slider */}
       <section className="relative min-h-[100vh] flex items-center justify-center pt-20 overflow-hidden">
         <AnimatePresence mode="popLayout">
@@ -99,7 +142,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-2xl"
             >
-              Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-400">Invisible Grills</span> <br />& Smart Cloth Hangers
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-400">Invisible Grills</span> <br />& Smart Cloth Hangers
             </motion.h1>
 
             <motion.p
@@ -108,7 +151,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lg md:text-xl text-neutral-200 mb-10 max-w-2xl leading-relaxed drop-shadow-md"
             >
-              Protect your loved ones without compromising your view. Experience the perfect blend of safety, style, and strength for modern homes.
+              Premium services in Bengaluru at affordable cost with free site visit. Protect your loved ones without compromising your view.
             </motion.p>
 
             <motion.div
@@ -160,7 +203,7 @@ export default function HomePage() {
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">About Skyline</h2>
               <p className="text-neutral-300 text-lg leading-relaxed mb-6">
-                Skyline Invisible Grills was founded with a singular mission: to provide uncompromising safety without disrupting the aesthetic appeal of modern homes. We believe that your home should be a safe haven, and you shouldn't have to choose between a beautiful view and peace of mind.
+                Skyline Invisible Grills was founded with a singular mission: to provide uncompromising safety without disrupting the aesthetic appeal of modern homes. We believe that your home should be a safe haven, and you shouldn&apos;t have to choose between a beautiful view and peace of mind.
               </p>
               <Link href="/about" className="inline-flex items-center gap-2 text-white font-semibold hover:gap-4 transition-all border-b border-white pb-1">
                 Read our full story <ArrowRight className="w-5 h-5" />
@@ -202,7 +245,7 @@ export default function HomePage() {
                 <div className="relative z-20">
                   <h3 className="text-3xl font-bold text-white mb-4">Invisible Grills</h3>
                   <p className="text-neutral-300 mb-6 max-w-md text-lg">
-                    Seamless safety that doesn't block your view. Available for balconies, windows, and custom installations. Perfect for pet and child safety.
+                    Seamless safety that doesn&apos;t block your view. Available for balconies, windows, and custom installations. Perfect for pet and child safety.
                   </p>
                   <Link href="/services#grills" className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-neutral-200 transition-all shadow-lg">
                     View Systems <ArrowRight className="w-5 h-5" />
@@ -359,6 +402,30 @@ export default function HomePage() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-neutral-950 border-t border-white/5">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
+            Invisible Grills in Bangalore: Quick Answers
+          </h2>
+          <div className="space-y-6 text-neutral-300">
+            <div className="border border-white/10 rounded-2xl p-6">
+              <h3 className="text-white text-xl font-semibold mb-2">What is the cost of invisible grills?</h3>
+              <p>Pricing depends on balcony/window dimensions, cable spacing, and site complexity. For accurate pricing, request a free quote from our team.</p>
+            </div>
+            <div className="border border-white/10 rounded-2xl p-6">
+              <h3 className="text-white text-xl font-semibold mb-2">Do you provide child and pet safety options?</h3>
+              <p>Yes. We provide narrow-gap, high-tension configurations designed for child and pet safety without blocking your view.</p>
+            </div>
+            <div className="border border-white/10 rounded-2xl p-6">
+              <h3 className="text-white text-xl font-semibold mb-2">How can I book installation?</h3>
+              <p>
+                Use our <Link href="/contact" className="text-white underline">contact page</Link>, call us directly, or WhatsApp us for a faster response and free site visit.
+              </p>
+            </div>
           </div>
         </div>
       </section>
