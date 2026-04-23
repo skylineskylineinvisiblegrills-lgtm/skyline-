@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       title: `Smart Cloth Hangers in ${selectedArea.name}, Bangalore`,
       description: `Premium cloth drying solutions for apartments in ${selectedArea.name}.`,
-      url: `https://www.skylinegrills.com/smart-cloth-hangers-bangalore/${selectedArea.slug}`,
+      url: `https://www.skylineinvisiblegrills.in/smart-cloth-hangers-bangalore/${selectedArea.slug}`,
       type: "website",
     },
   };
@@ -76,10 +76,10 @@ export default async function AreaPage({ params }: Params) {
     provider: {
       "@type": "LocalBusiness",
       name: "Skyline Invisible Grills",
-      url: "https://www.skylinegrills.com",
+      url: "https://www.skylineinvisiblegrills.in",
       telephone: "+919008603980",
     },
-    url: `https://www.skylinegrills.com/smart-cloth-hangers-bangalore/${selectedArea.slug}`,
+    url: `https://www.skylineinvisiblegrills.in/smart-cloth-hangers-bangalore/${selectedArea.slug}`,
   };
 
   return (

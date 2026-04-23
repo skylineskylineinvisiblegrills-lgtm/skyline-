@@ -25,7 +25,7 @@ const areaSlugs = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.skylinegrills.com'
+  const baseUrl = 'https://www.skylineinvisiblegrills.in'
   const lastModified = new Date()
 
   const routes = [

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.skylinegrills.com'),
+  metadataBase: new URL('https://www.skylineinvisiblegrills.in'),
   title: {
     default: "Invisible Grills & Smart Cloth Hangers Services in Bengaluru | Skyline",
     template: "%s | Skyline Invisible Grills"
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.skylinegrills.com/", 
+    url: "https://www.skylineinvisiblegrills.in/", 
     title: "Skyline Invisible Grills | Premium Balcony & Window Safety",
     description: "Protect your loved ones with our 316 marine-grade stainless steel invisible grills. Seamless aesthetics, 400kg impact resistance, and complete peace of mind.",
     siteName: "Skyline Invisible Grills",
@@ -74,14 +74,14 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Skyline Invisible Grills",
-  "image": "https://www.skylinegrills.com/icon",
-  "url": "https://www.skylinegrills.com",
+  "image": "https://www.skylineinvisiblegrills.in/icon",
+  "url": "https://www.skylineinvisiblegrills.in",
   "telephone": "+919008603980",
-  "email": "info@skylinegrills.com",
+  "email": "info@skylineinvisiblegrills.in",
   "areaServed": ["Bengaluru", "Bangalore", "Karnataka"],
   "priceRange": "₹₹",
   "sameAs": [
-    "https://www.skylinegrills.com"
+    "https://www.skylineinvisiblegrills.in"
   ],
   "address": {
     "@type": "PostalAddress",

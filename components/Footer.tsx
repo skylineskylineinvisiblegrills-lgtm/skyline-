@@ -42,7 +42,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-white/50 shrink-0" />
-                <a href="mailto:info@skylinegrills.com" className="hover:text-white transition-colors">info@skylinegrills.com</a>
+                <a href="mailto:info@skylineinvisiblegrills.in" className="hover:text-white transition-colors">info@skylineinvisiblegrills.in</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-white/50 shrink-0 mt-0.5" />

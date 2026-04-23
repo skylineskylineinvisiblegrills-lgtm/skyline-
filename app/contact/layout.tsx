@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Contact Skyline Invisible Grills",
     description:
       "Call, WhatsApp, or email Skyline for quick support, quotes, and installation planning.",
-    url: "https://www.skylinegrills.com/contact",
+    url: "https://www.skylineinvisiblegrills.in/contact",
     type: "website",
   },
   twitter: {

@@ -82,7 +82,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-neutral-400 mb-2">For business inquiries and partnership opportunities.</p>
-                <a href="mailto:info@skylinegrills.com" className="text-white hover:text-neutral-300 font-medium">info@skylinegrills.com</a>
+                <a href="mailto:info@skylineinvisiblegrills.in" className="text-white hover:text-neutral-300 font-medium">info@skylineinvisiblegrills.in</a>
               </div>
             </div>
             

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Smart Cloth Hangers in Bangalore | Skyline",
     description:
       "Premium ceiling cloth hangers and pull-and-dry systems with expert installation in Bangalore.",
-    url: "https://www.skylinegrills.com/smart-cloth-hangers-bangalore",
+    url: "https://www.skylineinvisiblegrills.in/smart-cloth-hangers-bangalore",
     type: "website",
   },
   twitter: {
@@ -56,10 +56,10 @@ const serviceJsonLd = {
   provider: {
     "@type": "LocalBusiness",
     name: "Skyline Invisible Grills",
-    url: "https://www.skylinegrills.com",
+    url: "https://www.skylineinvisiblegrills.in",
     telephone: "+919008603980",
   },
-  url: "https://www.skylinegrills.com/smart-cloth-hangers-bangalore",
+  url: "https://www.skylineinvisiblegrills.in/smart-cloth-hangers-bangalore",
 };
 
 export default function SmartClothHangersBangalorePage() {

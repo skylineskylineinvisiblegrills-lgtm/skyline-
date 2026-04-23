@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "About Skyline Invisible Grills",
     description:
       "Discover Skyline's quality-first approach to invisible grills and smart cloth hanger installations.",
-    url: "https://www.skylinegrills.com/about",
+    url: "https://www.skylineinvisiblegrills.in/about",
     type: "website",
   },
   twitter: {

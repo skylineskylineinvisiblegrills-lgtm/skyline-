@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Skyline Project Gallery",
     description:
       "Browse finished installations and design outcomes from Skyline Invisible Grills.",
-    url: "https://www.skylinegrills.com/gallery",
+    url: "https://www.skylineinvisiblegrills.in/gallery",
     type: "website",
   },
   twitter: {

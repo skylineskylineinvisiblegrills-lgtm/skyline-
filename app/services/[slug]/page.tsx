@@ -130,7 +130,7 @@ export async function generateMetadata(
     openGraph: {
       title: `${service.title} | Skyline Invisible Grills`,
       description: service.desc,
-      url: `https://www.skylinegrills.com/services/${slug}`,
+      url: `https://www.skylineinvisiblegrills.in/services/${slug}`,
       type: "article",
       images: [
         {
@@ -167,7 +167,7 @@ export default async function ServiceDetailsPage({ params }: { params: Promise<{
     provider: {
       "@type": "LocalBusiness",
       name: "Skyline Invisible Grills",
-      url: "https://www.skylinegrills.com",
+      url: "https://www.skylineinvisiblegrills.in",
       telephone: "+919008603980",
     },
     areaServed: {
@@ -175,8 +175,8 @@ export default async function ServiceDetailsPage({ params }: { params: Promise<{
       name: "Bengaluru",
     },
     serviceType: service.title,
-    url: `https://www.skylinegrills.com/services/${slug}`,
-    image: `https://www.skylinegrills.com${service.image}`,
+    url: `https://www.skylineinvisiblegrills.in/services/${slug}`,
+    image: `https://www.skylineinvisiblegrills.in${service.image}`,
   };
 
   return (

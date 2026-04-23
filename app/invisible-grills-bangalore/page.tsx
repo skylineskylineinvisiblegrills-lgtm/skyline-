@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Invisible Grills in Bangalore | Skyline",
     description:
       "Premium invisible grills for balconies and windows in Bangalore. Book a free quote and expert installation.",
-    url: "https://www.skylinegrills.com/invisible-grills-bangalore",
+    url: "https://www.skylineinvisiblegrills.in/invisible-grills-bangalore",
     type: "website",
   },
   twitter: {
@@ -80,10 +80,10 @@ const serviceJsonLd = {
   provider: {
     "@type": "LocalBusiness",
     name: "Skyline Invisible Grills",
-    url: "https://www.skylinegrills.com",
+    url: "https://www.skylineinvisiblegrills.in",
     telephone: "+919008603980",
   },
-  url: "https://www.skylinegrills.com/invisible-grills-bangalore",
+  url: "https://www.skylineinvisiblegrills.in/invisible-grills-bangalore",
 };
 
 export default function InvisibleGrillsBangalorePage() {

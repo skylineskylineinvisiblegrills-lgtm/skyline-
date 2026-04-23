@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/'],
     },
-    host: 'https://www.skylinegrills.com',
-    sitemap: 'https://www.skylinegrills.com/sitemap.xml',
+    host: 'https://www.skylineinvisiblegrills.in',
+    sitemap: 'https://www.skylineinvisiblegrills.in/sitemap.xml',
   }
 }

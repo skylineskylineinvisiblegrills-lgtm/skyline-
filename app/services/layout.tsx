@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Skyline Services: Invisible Grills & Hangers",
     description:
       "Find premium safety and utility solutions tailored for modern homes and apartments.",
-    url: "https://www.skylinegrills.com/services",
+    url: "https://www.skylineinvisiblegrills.in/services",
     type: "website",
   },
   twitter: {
