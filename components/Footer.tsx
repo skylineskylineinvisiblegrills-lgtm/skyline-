@@ -60,9 +60,7 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="text-center w-full text-xs text-neutral-500">
-          Made with ❤️ by <a href="https://staffarc.in" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-400 font-semibold transition-colors">StaffArc</a>
-        </div>
+        
       </div>
     </footer>
   );
